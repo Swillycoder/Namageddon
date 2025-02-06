@@ -4,13 +4,13 @@ const ctx = canvas.getContext('2d');
 canvas.width = 960;
 canvas.height = 560;
 
-const introMusic = new Audio('/helicopter.mp3')
-const music = new Audio('/sacrifice.mp3');
-const gunshot = new Audio('/gunshot2.mp3');
-const grenade_snd = new Audio('/airstrike.mp3');
-const airstrike_snd = new Audio('/airstrike.mp3');
-const voice1 = new Audio('/voice1.mp3');
-const voice2 = new Audio('/voice2.mp3')
+const introMusic = new Audio('https://raw.githubusercontent.com/Swillycoder/Namageddon/main/helicopter.mp3')
+const music = new Audio('https://raw.githubusercontent.com/Swillycoder/Namageddon/main/sacrifice.mp3');
+const gunshot = new Audio('https://raw.githubusercontent.com/Swillycoder/Namageddon/main/gunshot2.mp3');
+const grenade_snd = new Audio('https://raw.githubusercontent.com/Swillycoder/Namageddon/main/airstrike.mp3');
+const airstrike_snd = new Audio('https://raw.githubusercontent.com/Swillycoder/Namageddon/main/airstrike.mp3');
+const voice1 = new Audio('https://raw.githubusercontent.com/Swillycoder/Namageddon/main/voice1.mp3');
+const voice2 = new Audio('https://raw.githubusercontent.com/Swillycoder/Namageddon/main/voice2.mp3')
 
 introMusic.loop = true;
 music.loop = true;
@@ -19,31 +19,31 @@ gunshot.volume = 0.3;
 
 
 const images = {
-    soldier: 'http://localhost:8000/soldier.png',
-    map_img: 'http://localhost:8000/clearing.png',
-    tree1_img: 'http://localhost:8000/tree1.png',
-    trees2_img: 'http://localhost:8000/tree2.png',
-    trees3_img: 'http://localhost:8000/trees4.png',
-    tower_img: 'http://localhost:8000/watch_tower.png',
-    vietkong1_img: 'http://localhost:8000/vietkong1.png',
-    grenade_img: 'http://localhost:8000/grenade_img.png',
-    grenade: 'http://localhost:8000/grenade.png',
-    missile_img: 'http://localhost:8000/missile_img.png',
-    missile: 'http://localhost:8000/missile.png',
-    airstrike_img: 'http://localhost:8000/airstrike_img.png',
-    airdrop_img: 'http://localhost:8000/airdrop.png',
-    explosion_img: 'http://localhost:8000/explosion_img.png',
-    bomber_img: 'http://localhost:8000/bomber_img.png',
-    preintro_img: 'http://localhost:8000/preintro.png',
-    intro_img: 'http://localhost:8000/intro.png',
-    PVT_img: 'http://localhost:8000/1PV2.png',
-    PVT2_img: 'http://localhost:8000/2PFC.png',
-    SPC_img: 'http://localhost:8000/3SPC.png',
-    CPL_img: 'http://localhost:8000/4CPL.png',
-    SGT_img: 'http://localhost:8000/5SGT.png',
-    SFC_img: 'http://localhost:8000/6SFC.png',
-    gameover_img: 'http://localhost:8000/gameover.png',
-    medalofhonor: 'http://localhost:8000/medalofhonor.png',
+    soldier: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/soldier.png',
+    map_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/clearing.png',
+    tree1_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/tree1.png',
+    trees2_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/tree2.png',
+    trees3_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/trees4.png',
+    tower_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/watch_tower.png',
+    vietkong1_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/vietkong1.png',
+    grenade_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main//grenade_img.png',
+    grenade: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/grenade.png',
+    missile_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/missile_img.png',
+    missile: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/missile.png',
+    airstrike_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/airstrike_img.png',
+    airdrop_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/airdrop.png',
+    explosion_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/explosion_img.png',
+    bomber_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/bomber_img.png',
+    preintro_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/preintro.png',
+    intro_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/intro.png',
+    PVT_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/1PV2.png',
+    PVT2_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/2PFC.png',
+    SPC_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/3SPC.png',
+    CPL_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/4CPL.png',
+    SGT_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/5SGT.png',
+    SFC_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/6SFC.png',
+    gameover_img: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/gameover.png',
+    medalofhonor: 'https://raw.githubusercontent.com/Swillycoder/Namageddon/main/medalofhonor.png',
 };
 
 function loadImages(callback) {
